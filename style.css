@@ -1,0 +1,343 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY BACKGROUND (فاخر) */
+body{
+height:100vh;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+z-index:-1;
+animation: zoom 20s infinite alternate;
+}
+
+@keyframes zoom{
+0%{transform:scale(1);}
+100%{transform:scale(1.1);}
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+backdrop-filter: blur(10px);
+background: rgba(0,0,0,0.3);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+font-size:28px;
+color:#00eaff;
+text-shadow:0 0 15px #00eaff;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00eaff;
+}
+
+/* AUTH */
+.auth button{
+margin:5px;
+padding:8px 15px;
+border:none;
+border-radius:20px;
+background:#00eaff;
+color:black;
+cursor:pointer;
+transition:0.3s;
+}
+
+.auth button:hover{
+background:white;
+}
+
+/* LANGUAGE */
+#lang{
+padding:5px;
+border-radius:10px;
+border:none;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:100px 20px;
+}
+
+.hero h2{
+font-size:50px;
+text-shadow:0 0 20px #00eaff;
+}
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+}
+
+/* SECTIONS */
+section{
+padding:50px;
+}
+
+h2{
+margin-bottom:20px;
+font-size:30px;
+color:#00eaff;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+width:250px;
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(15px);
+border-radius:15px;
+overflow:hidden;
+text-align:center;
+transition:0.4s;
+cursor:pointer;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 25px #00eaff;
+}
+
+/* PRICE */
+.price{
+color:gold;
+font-size:22px;
+animation: blink 1s infinite alternate;
+}
+
+@keyframes blink{
+from{opacity:1;}
+to{opacity:0.5;}
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.box{
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+display:flex;
+flex-direction:column;
+gap:10px;
+width:300px;
+}
+
+.box input{
+padding:10px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.box button{
+background:#00eaff;
+border:none;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+background: rgba(0,0,0,0.8);
+backdrop-filter: blur(15px);
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:50px;
+}
+
+.footer h2{
+color:#00eaff;
+margin-bottom:25px;
+}
+
+/* SOCIAL */
+.socials{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+.socials a{
+text-decoration:none;
+color:white;
+padding:12px 18px;
+border-radius:30px;
+background:rgba(255,255,255,0.1);
+transition:0.3s;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.socials a i{
+font-size:18px;
+}
+
+.socials a:hover{
+background:#00eaff;
+color:black;
+transform:scale(1.1);
+}
+
+/* CONTACT */
+.contact p{
+margin:8px 0;
+font-size:15px;
+}
+
+.contact i{
+margin-right:8px;
+color:#00eaff;
+}
+
+/* GPS BUTTON */
+.gps-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#00eaff;
+color:black;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.gps-btn:hover{
+background:white;
+transform:scale(1.1);
+}
+
+/* COPYRIGHT */
+.copy{
+margin-top:20px;
+font-size:13px;
+opacity:0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+text-decoration:none;
+box-shadow:0 0 20px #25D366;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.hero h2{
+font-size:35px;
+}
+
+}
